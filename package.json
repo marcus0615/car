@@ -1,26 +1,32 @@
 {
-  "name": "node-js-getting-started",
-  "version": "0.2.5",
-  "description": "A sample Node.js app using Express 4",
-  "engines": {
-    "node": "5.9.1"
-  },
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
+  "name": "node-pushserver",
+  "version": "0.5.4",
+  "description": "Cross-platform Push Notifications. A project providing a generic API to push messages using Apple's APN and Google's GCM services.",
+  "keywords": [
+    "push",
+    "gcm",
+    "apn",
+    "mongodb"
+  ],
   "dependencies": {
-    "ejs": "2.4.1",
-    "express": "4.13.3"
+    "mongoose": "~4.1.11",
+    "node-gcm": "~0.9.6",
+    "lodash": "~1.3.1",
+    "apn": "~1.3.4",
+    "express": "~3.2.6",
+    "commander": "2.7.1"
+  },
+  "bin": {
+    "pushserver": "./bin/pushserver.js"
+  },
+  "main": "./lib/PushController.js",
+  "scripts": {
+"start": "node ./bin/pushserver.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
+    "url": "git://github.com/Smile-SA/node-pushserver.git"
   },
-  "keywords": [
-    "node",
-    "heroku",
-    "express"
-  ],
-  "license": "MIT"
+  "bugs": "https://github.com/Smile-SA/node-pushserver/issues"
 }
